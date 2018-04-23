@@ -56,13 +56,13 @@ public abstract class AbstractBinaryTree<E> extends AbstractTree<E> implements
 
 	
 	// The following part has to do with Exercise 3. 
-	/**
+	
 	protected void recDisplay(Position<E> r, 
 			int[] control, int level) 
 	{
 		// ADD CODE to override this method as specified in Exercise 3
 	}
-	**/
+	
 
 
 	// The following part has to do with Exercise 5.
