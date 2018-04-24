@@ -2,7 +2,6 @@ package testerClasses;
 
 import labUtils.Utils;
 import treeClasses.LinkedBinaryTree;
-import treeClasses.LinkedBinaryTree2;
 
 public abstract class TreeTester8 {
 
