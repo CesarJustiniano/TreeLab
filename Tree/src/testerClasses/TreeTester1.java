@@ -13,7 +13,7 @@ import treeInterfaces.Position;
  */
 public class TreeTester1 {
 	public static void main(String[] args) { 
-		LinkedTree<String> t = new LinkedTree<>(); 
+		LinkedTree<String> t = null; 
 		
 		// add nodes and data to the tree
 		Position<String> p = t.addRoot("ROOT"); 	

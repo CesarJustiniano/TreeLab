@@ -120,6 +120,8 @@ public class LinkedTree<E> extends AbstractTree<E> implements Cloneable {
 			}	
 		}
 		
+		parent.getChildren().remove(ntd);
+		
 		/*******************************************************/
 		// SOME MISSING CODE HERE -- DISCOVER IT AN ADD... 
 		// AS SPECIFIED IN EXERCISE 4. 
@@ -134,6 +136,9 @@ public class LinkedTree<E> extends AbstractTree<E> implements Cloneable {
 	
 	// Creating a CLONE
 	public LinkedTree<E> clone() throws CloneNotSupportedException { 
+		if(this.equals(null))
+			throw new CloneNotSupportedException();
+		
 		LinkedTree<E> other = new LinkedTree<>(); 
 		if (!isEmpty()) {
 			other.addRoot(root().getElement()); 

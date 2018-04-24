@@ -259,4 +259,30 @@ public class LinkedBinaryTree<E> extends AbstractBinaryTree<E> {
 	protected Node<E> createNode(E e, Node<E> p, Node<E> l, Node<E> r) { 
 		return new Node<E>(e, p, l, r); 
 	}
+	
+	// Creating a CLONE
+	public LinkedBinaryTree<E> clone() throws CloneNotSupportedException { 
+		if(this.equals(null))
+			throw new CloneNotSupportedException();
+			
+		LinkedBinaryTree<E> other = new LinkedBinaryTree<>(); 
+		if (!isEmpty()) {
+			other.addRoot(root().getElement()); 
+		    cloneSubtree(root(), other, other.root()); 
+		}
+		return other; 
+	}
+	
+	private void cloneSubtree(Position<E> rThis, LinkedBinaryTree<E> other,
+			Position<E> rOther) {
+		for (Position<E> pThis : children(rThis)) { 
+			Position<E> pOther;
+			if(!other.hasLeft(rOther))
+				pOther = other.addLeft(rOther, pThis.getElement());
+			else
+				pOther = other.addRight(rOther, pThis.getElement());
+			
+			cloneSubtree(pThis, other, pOther); 
+		}
+	}
 }
