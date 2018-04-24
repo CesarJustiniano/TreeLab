@@ -1,7 +1,6 @@
 package testerClasses;
 
 import labUtils.Utils;
-import treeClasses.LinkedBinaryTree;
 import treeClasses.LinkedTree;
 
 public class TreeTester7 {
